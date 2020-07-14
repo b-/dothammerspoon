@@ -13,7 +13,7 @@ function tabUp (event)
     if sendTab then
       tabHotKey:disable() -- temporarily disable so we can send an actual tab
       hs.timer.doAfter(0, function () -- there is a nominal delay after doing hs.hotkey:disable(), but setting it to 0 seems to suffice
-	      hs.eventtap.keyStroke({}, 'tab')
+	      hs.eventtap.keyStroke({}, 'tab', 0)
 	      delayedEnable:start()
       end)
     end
